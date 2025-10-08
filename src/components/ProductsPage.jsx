@@ -190,18 +190,18 @@ const pageCount = Math.ceil(allProducts.length / itemsPerPage);
                
  <p className=" absolute text-center right-[45%] bg-teal-700 font-semibold text-white px-2 py-1 ">تمامی محصولات</p>
   {loading && <div > <Loading /> </div>}
-    {allProducts.map((p)=>(
-        <div key={p.id} className="border border-teal-600 text-center  cursor-pointer bg-white p-1 rounded shadow flex flex-row justify-center items-center border-b">
-            <img className="w-full h-20  "   src={`https://localhost:7002/${p.imageUrl}`} alt={p.description || "لود نمیشود"} /> 
-            <h3 className="text-md break-words w-2/3 h-20 overflow-hidden ">{p.description}</h3>
+    {currentItems.map((p)=>(
+        <div key={p.id} className="border relative border-teal-600 text-center h-40  cursor-pointer bg-white p-1 rounded shadow flex flex-row justify-center items-center border-b">
+            <img className="w-full h-full  "   src={`https://localhost:7002/${p.imageUrl}`} alt={p.description || "لود نمیشود"} /> 
+            <h3 className="text-md break-words w-2/3  overflow-hidden ">{p.description}</h3>
             <p className="text-sm text-gray-600">{p.price} تومان</p>
-            <button onClick={()=> handleDelete(p.id)} className=" bg-gray-400 text-red-600 font-mono h-6 self-center rounded-2xl pb-1 cursor-pointer px-0.5 text-center ">حذف </button>
+            <button onClick={()=> handleDelete(p.id)} className=" absolute bottom-2 right-2  underline text-red-600 font-mono h-6 self-center rounded-2xl pb-1 cursor-pointer px-0.5 text-center ">حذف </button>
             
 
           </div>
           
     ))}
-    <div className="flex justify-center mt-6">
+    <div className="flex justify-center mt-10 sticky  bottom-0 left-40  z-30 bg-gray-300 w-[900px] h-10 p-1 rounded-2xl">
   <ReactPaginate
     previousLabel="قبلی"
     nextLabel="بعدی"
@@ -209,10 +209,10 @@ const pageCount = Math.ceil(allProducts.length / itemsPerPage);
     pageCount={pageCount}
     onPageChange={({ selected }) => setCurrentPage(selected)}
     containerClassName="flex gap-2"
-    pageClassName="px-3 py-1 border rounded-md text-teal-700 hover:bg-teal-100"
-    activeClassName="bg-teal-700 text-white"
-    previousClassName="px-3 py-1 border rounded-md text-gray-600 hover:bg-gray-200"
-    nextClassName="px-3 py-1 border rounded-md text-gray-600 hover:bg-gray-200"
+    pageClassName=" w-4 h-7 cursor-pointer hover:text-red-400 text-center border rounded-md text-teal-700 hover:bg-teal-100"
+    activeClassName="bg-teal-700 text-white  "
+    previousClassName=" w-12 text-center py-0.5 px-0.5 cursor-pointer border rounded-md text-gray-600 hover:bg-gray-200"
+    nextClassName=" w-12 text-center py-0.5 px-0.5 cursor-pointer border rounded-md text-gray-600 hover:bg-gray-200"
   />
 </div>
 

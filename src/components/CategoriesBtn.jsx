@@ -84,7 +84,7 @@ const handleDelete = async (id) => {
             {products.map((p) => (
               <div
                 key={p.id}
-                className="rounded-lg w-58 relative h-40 border-teal-600/70 border-2  bg-white flex flex-col "
+                className="rounded-lg w-58 relative h-40 border-teal-600/70 border-1  bg-white flex flex-col "
               >
              
                 <img
@@ -96,7 +96,7 @@ const handleDelete = async (id) => {
                 <p className="text-md absolute right-1 top-10 text-right">  قیمت  : {p.price}</p>
                 <p className="text-right break-words px-1">  {p.description}</p>
                 <p className=" absolute right-1 top-2"> موجودی : {p.inventory}</p>
-                <button onClick={()=> handleDelete(p.id)} className=" absolute left-1 bottom-1 hover:scale-101  hover:cursor-pointer  hover:bg-gray-700 bg-gray-400 transition  text-red-600 w-1/3 rounded text-md font-semibold  font-mono ">حذف</button>
+                <button onClick={()=> handleDelete(p.id)} className=" absolute left-1 bottom-1 hover:scale-101  hover:cursor-pointer  hover:bg-gray-400 bg-gray-300 transition  text-red-600 w-1/3 rounded text-md font-semibold  font-mono ">حذف</button>
 
 
               </div>

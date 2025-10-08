@@ -249,18 +249,18 @@ const handleDelete = async (id) => {
                                 </form>
                                      </div>   
 
-      <div className="  p-4 grid grid-cols-5 items-center  mx-auto mt-32 w-[90%] max-h-screen border border-black/40 rounded-2xl  overflow-y-scroll   ">
+      <div className="  p-4  grid grid-cols-5 items-center  mx-auto mt-32 w-[90%] max-h-screen border border-black/40 rounded-2xl  overflow-y-scroll   ">
         {allCategories.length > 0 ? (
           allCategories.map((e, i) => (
-            <div key={i} className="border-2 bg-gray-300 border-teal-600 rounded-2xl  mb-4 w-60 h-56 flex flex-col text-center">
+            <div key={i} className="border-1 bg-gray-300 border-teal-600 rounded-2xl  mb-4 w-60 h-56 flex flex-col text-center">
               <img src={`https://localhost:7002${e.imageUrl}`} alt="تصویر دسته‌بندی" className=" w-full  rounded-t-2xl  object-center overflow-hidden" />
               <p className="text-2xl text-gray-700 ">{e.name}</p>
               <p  >{e.id} : شماره</p>
 
 
                    <div className="flex gap-x-4 justify-between pb-0.5 mx-0.5 font-mono mt-3" >
-                    <button onClick={()=> handleDelete(e.id)} className="border hover:scale-104 hover:cursor-pointer hover:bg-white transition  text-red-600 w-1/3 rounded-2xl text-lg font-semibold ">حذف</button>
-                    <button onClick={()=> {setEditOpen(prev=> !prev) ; setEditId(e.id) ; setName(e.name) }  } className="border hover:scale-104 hover:cursor-pointer hover:bg-white transition text-sky-400 w-1/3 rounded-2xl text-lg font-semibold  ">تغییر</button>           
+                    <button onClick={()=> handleDelete(e.id)} className=" hover:scale-104 hover:cursor-pointer bg-gray-200 hover:bg-white transition  text-red-600 w-1/3 rounded-2xl text-lg font-semibold ">حذف</button>
+                    <button onClick={()=> {setEditOpen(prev=> !prev) ; setEditId(e.id) ; setName(e.name) }  } className=" hover:scale-104 hover:cursor-pointer bg-gray-200 hover:bg-white transition text-sky-400 w-1/3 rounded-2xl text-lg font-semibold  ">تغییر</button>           
         
                     </div>
                
