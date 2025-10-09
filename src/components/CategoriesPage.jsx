@@ -19,7 +19,7 @@ export default function CategoriesPage() {
   const fetchCategories = async()=> {
           setLoading(true)
             try{
-              const res = await axios.get("https://localhost:7002/api/Category") ;
+              const res = await axios.get("https://style-tehran-shirt-backend.onrender.com/api/Category") ;
               setAllCategories(res.data.data) ;
               setLoading(false)
             } catch (err) {
@@ -47,7 +47,7 @@ useEffect(()=>{
     formData.append("Name", name);
 
     try {
-      const response = await fetch("https://localhost:7002/api/Category", {
+      const response = await fetch("https://style-tehran-shirt-backend.onrender.com/api/Category", {
         method: 'POST',
         body: formData,
       });
@@ -91,7 +91,7 @@ const handleDelete = async (id) => {
   if (!result.isConfirmed) return; // اگر کاربر منصرف شد، خروج
 
   try {
-    const res = await fetch(`https://localhost:7002/api/Category/${id}`, {
+    const res = await fetch(`https://style-tehran-shirt-backend.onrender.com/api/Category/${id}`, {
       method: "DELETE",
     });
 
@@ -137,7 +137,7 @@ const handleDelete = async (id) => {
   formData.append("Name", name);
 
   try {
-    const res = await fetch(`https://localhost:7002/api/Category/${editId}`, {
+    const res = await fetch(`https://style-tehran-shirt-backend.onrender.com/api/Category/${editId}`, {
       method: "PUT",
       body: formData,
     });
@@ -253,7 +253,7 @@ const handleDelete = async (id) => {
         {allCategories.length > 0 ? (
           allCategories.map((e, i) => (
             <div key={i} className="border-1 bg-gray-300 border-teal-600 rounded-2xl  mb-4 w-60 h-56 flex flex-col text-center">
-              <img src={`https://localhost:7002${e.imageUrl}`} alt="تصویر دسته‌بندی" className=" w-full  rounded-t-2xl  object-center overflow-hidden" />
+              <img src={`https://style-tehran-shirt-backend.onrender.com${e.imageUrl}`} alt="تصویر دسته‌بندی" className=" w-full  rounded-t-2xl  object-center overflow-hidden" />
               <p className="text-2xl text-gray-700 ">{e.name}</p>
               <p  >{e.id} : شماره</p>
 

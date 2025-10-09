@@ -13,7 +13,6 @@ export default function CategoriesBtn() {
 
 const [categories , setCategories] = useState([]) ;
 const [products , setProducts] = useState([]) ;
-const [editId , setEditId] = useState(null) ;
 
 
 
@@ -21,7 +20,7 @@ const [editId , setEditId] = useState(null) ;
 useEffect(()=> {
     const fetchCategoris = async ()=> {
         try{
-            const res = await axios.get("https://localhost:7002/api/Category") ;
+            const res = await axios.get("https://style-tehran-shirt-backend.onrender.com/api/Category") ;
             const formatted = res.data.data.map((e)=> ({
                 value: e.id ,
                 label: e.name ,
@@ -37,7 +36,7 @@ useEffect(()=> {
  const handleCategories = async (selectOption) => {
     if(!selectOption) return ;
     try{
-        const res = await axios.get(`https://localhost:7002/api/Products/ByCategory/${selectOption.value}`)
+        const res = await axios.get(`https://style-tehran-shirt-backend.onrender.com/api/Products/ByCategory/${selectOption.value}`)
         setProducts(res.data.data)
        
     } catch(err) {
@@ -48,7 +47,7 @@ const handleDelete = async (id) => {
     const confrimDelete = window.confirm("آیا مایلید محصول را حذف کنید ؟") ;
     if (!confrimDelete) return ;
     try {
-        const res = await fetch(`https://localhost:7002/api/Products/${id}`, {
+        const res = await fetch(`https://style-tehran-shirt-backend.onrender.com/api/Products/${id}`, {
          method : "DELETE" ,
         }) ;
         if(res.ok ) {
@@ -88,7 +87,7 @@ const handleDelete = async (id) => {
               >
              
                 <img
-                  src={`https://localhost:7002/${p.imageUrl}`}
+                  src={`https://style-tehran-shirt-backend.onrender.com/${p.imageUrl}`}
                   alt={p.Name}
                   className="  object-center rounded-md w-1/2 h-1/2"
                 />

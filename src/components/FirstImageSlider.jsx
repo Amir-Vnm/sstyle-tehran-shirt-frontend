@@ -14,7 +14,7 @@ const [categories , setCategories] = useState([]) ;
 useEffect(()=>{
     const fetchCategories = async()=> {
     try {
-        const res = await fetch("https://localhost:7002/api/Category") ;
+        const res = await fetch("https://style-tehran-shirt-backend.onrender.com/api/Category") ;
         const data = await res.json() ;
         setCategories(data.data) ;
         
@@ -71,7 +71,7 @@ useEffect(()=>{
         <SwiperSlide key={e.id} >
   <div  className=" flex items-center  bg-red-500 w-full md:h-[50vh]  relative border-x-3 border-teal-800">
     <Link to={`Products/ByCategory/${e.id}`} >
-     <img src={`https://localhost:7002${e.imageUrl}`} 
+     <img src={`https://style-tehran-shirt-backend.onrender.com${e.imageUrl}`} 
       alt={e.name}  className=" w-full p-0  md:h-[50vh] object-cover rounded " />
      <p className=" absolute bottom-16 text-teal-600 text-shadow-sm/80 text-shadow-black left-2 underline underline-offset-7 text-2xl" >{e.name}</p>
      </Link>

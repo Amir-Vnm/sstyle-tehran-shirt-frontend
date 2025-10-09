@@ -34,7 +34,7 @@ function ProductDetails() {
   useEffect(() => {
     async function fetchProduct() {
       try {
-        const { data } = await axios.get(`https://localhost:7002/api/Products/${id}`);
+        const { data } = await axios.get(`https://style-tehran-shirt-backend.onrender.com/api/Products/${id}`);
         setProduct(data.data); 
       } catch (error) {
         console.error("Error fetching product:", err);
@@ -114,7 +114,7 @@ function ProductDetails() {
       <div className="relative border border-black/30 bg-white shadow-md    max-w-3xl mx-auto">
 
         <img
-          src={`https://localhost:7002/${product.imageUrl}`}
+          src={`https://style-tehran-shirt-backend.onrender.com/${product.imageUrl}`}
           alt={product.name}
           className="w-full h-80 object-cover mb-4 "
         />

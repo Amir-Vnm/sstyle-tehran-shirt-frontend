@@ -28,7 +28,7 @@ const sortCheapFirst = () => {
   useEffect(() => {
     async function fetchProducts() {
       try {
-        const { data } = await axios.get(`https://localhost:7002/api/Products/ByCategory/${categoryId}`);
+        const { data } = await axios.get(`https://style-tehran-shirt-backend.onrender.com/api/Products/ByCategory/${categoryId}`);
         setProducts(data.data);
       } catch (error) {
         console.error("Error fetching products:", error);
@@ -56,7 +56,7 @@ const sortCheapFirst = () => {
             <div key={p.id} className=" relative border border-black/30   bg-white cursor-pointer shadow-sm hover:shadow-md hover:border-teal-500 hover:shadow-teal-500 hover:scale-101  shadow-gray-500 ">
                <Link to={`/Products/${p.id}`}>
               <img
-                src={`https://localhost:7002/${p.imageUrl}`}
+                src={`https://style-tehran-shirt-backend.onrender.com/${p.imageUrl}`}
                 alt={p.name}
                 className="w-full h-50 object-cover mb-2 "
               />

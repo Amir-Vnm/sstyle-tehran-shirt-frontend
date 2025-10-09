@@ -38,7 +38,7 @@ const { wishlist , toggleWishlist  } = useShopStore() ;
 
                 <div key={e.id} className=' relative flex flex-row-reverse justify-around items-center mr-4 mt-[10px] md:mt-10 border-y bg-gray-100 border-black/30 overflow-hidden hover:scale-102 transition shadow-sm shadow-black/30 hover:shadow-md ' >
                   <Link to={`/Products/${e.id}`}>
-                      <img className="w-24 h-[60px] md:h-22  " src={`https://localhost:7002/${e.imageUrl}`} alt={e.description || "لود نمیشود"} />
+                      <img className="w-24 h-[60px] md:h-22  " src={`https://style-tehran-shirt-backend.onrender.com/${e.imageUrl}`} alt={e.description || "لود نمیشود"} />
                       <p className="text-right p-1 text-md w-2/4 break-words  " >{e.description}</p>
                       <p className="text-center pt-1 font-bold underline underline-offset-5"> {` تومان ${e.price}  `} </p>
                      <button onClick={()=> toggleWishlist(e)  } className='border rounded-4xl bg-red-200 border-white hover:scale-110 cursor-pointer' >❌</button>

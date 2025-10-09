@@ -27,7 +27,7 @@ function ProductsPage() {
 const fetchAllproducts = async () => {
   setLoading(true);
   try {
-    const res = await fetch('https://localhost:7002/api/Products');
+    const res = await fetch('https://style-tehran-shirt-backend.onrender.com/api/Products');
     const data = await res.json();
     setAllProducts(data.data);
     setLoading(false);  
@@ -59,7 +59,7 @@ const handleSubmit = async (e) => {
     formData.append('CategoryId' , categories )
 
     try {
-        const response = await fetch('https://localhost:7002/api/Products' , {
+        const response = await fetch('https://style-tehran-shirt-backend.onrender.com/api/Products' , {
             method:'POST' ,
             body: formData ,
         })
@@ -101,7 +101,7 @@ const handleSubmit = async (e) => {
         console.log('محصول حذف شد:', id);
   
     try {
-        const res = await fetch(`https://localhost:7002/api/Products/${id}`, {
+        const res = await fetch(`https://style-tehran-shirt-backend.onrender.com/api/Products/${id}`, {
          method : "DELETE" ,
         }) ;
         if(res.ok ) {
@@ -192,7 +192,7 @@ const pageCount = Math.ceil(allProducts.length / itemsPerPage);
   {loading && <div > <Loading /> </div>}
     {currentItems.map((p)=>(
         <div key={p.id} className="border relative border-teal-600 text-center h-40  cursor-pointer bg-white p-1 rounded shadow flex flex-row justify-center items-center border-b">
-            <img className="w-full h-full  "   src={`https://localhost:7002/${p.imageUrl}`} alt={p.description || "لود نمیشود"} /> 
+            <img className="w-full h-full  "   src={`https://style-tehran-shirt-backend.onrender.com/${p.imageUrl}`} alt={p.description || "لود نمیشود"} /> 
             <h3 className="text-md break-words w-2/3  overflow-hidden ">{p.description}</h3>
             <p className="text-sm text-gray-600">{p.price} تومان</p>
             <button onClick={()=> handleDelete(p.id)} className=" absolute bottom-2 right-2  underline text-red-600 font-mono h-6 self-center rounded-2xl pb-1 cursor-pointer px-0.5 text-center ">حذف </button>
