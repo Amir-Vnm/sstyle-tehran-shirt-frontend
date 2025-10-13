@@ -38,9 +38,9 @@ export default function NewCollection() {
             loop={true}
             className="h-full  relative z-10 cursor-grab "
           >
-            <SwiperSlide><img className="h-[250px]  md:h-auto" src={photo1} alt="1" /></SwiperSlide>
-            <SwiperSlide><img className="h-[250px]  md:h-auto" src={photo2} alt="2" /></SwiperSlide>
-            <SwiperSlide><img  className="h-[250px]  md:h-auto" src={photo3} alt="3" /></SwiperSlide>
+            <SwiperSlide><img loading="lazy" className="h-[250px]  md:h-auto" src={photo1} alt="1" /></SwiperSlide>
+            <SwiperSlide><img loading="lazy" className="h-[250px]  md:h-auto" src={photo2} alt="2" /></SwiperSlide>
+            <SwiperSlide><img loading="lazy" className="h-[250px]  md:h-auto" src={photo3} alt="3" /></SwiperSlide>
           </Swiper>
         </div>
 
@@ -85,9 +85,9 @@ export default function NewCollection() {
             loop={true}
             className="h-full  relative z-10 cursor-grab"
           >
-            <SwiperSlide><img className="h-[242px]  md:h-auto" src={photo4} alt="4" /></SwiperSlide>
-            <SwiperSlide><img className="h-[250px]  md:h-auto" src={photo5} alt="5" /></SwiperSlide>
-            <SwiperSlide><img className="h-[250px]  md:h-auto" src={photo6} alt="6" /></SwiperSlide>
+            <SwiperSlide><img loading="lazy" className="h-[242px]  md:h-auto" src={photo4} alt="4" /></SwiperSlide>
+            <SwiperSlide><img loading="lazy" className="h-[250px]  md:h-auto" src={photo5} alt="5" /></SwiperSlide>
+            <SwiperSlide><img loading="lazy" className="h-[250px]  md:h-auto" src={photo6} alt="6" /></SwiperSlide>
           </Swiper>
         </div>     
       </div>

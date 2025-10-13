@@ -3,14 +3,13 @@ import { lazy, Suspense } from 'react';
 
 import { BrowserRouter, Route ,Routes } from 'react-router-dom'
 import Header from './components/Header';
-const MainContent = lazy(() => import('./components/MainContent'));
+import MainContent from './components/MainContent'
+
 const AdminDashboard = lazy(() => import('./components/AdminDashboard'));
 const CategoryProducts = lazy(() => import('./components/CategoryProducts'));
 const ProductDetails = lazy(() => import('./components/ProductDetails'));
 const AboutUs = lazy(() => import('./components/AboutUs'));
 const ContactUs = lazy(() => import('./components/ContactUs'));
-const EndLine =  lazy(() => import('./components/EndLine'));
-
 import ProtectedRoute from './components/ProtectedRoute';
 import HamburgerMenu from './components/HamburgerMenu';
 import DashboardPage from './components/DashboardPage';
@@ -40,7 +39,7 @@ function App() {
 <Routes>
 
 
-   <Route path='/' element={ <MainContent />} />
+   <Route path="/" element={ <MainContent />} />
 
 
                <Route path="/admin" element={

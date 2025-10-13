@@ -27,9 +27,8 @@ useEffect(()=> {
 } , [])
 
 
-const offProduct = allProduct.filter(p=> 
-  p.price < 800
-) ;
+const offProduct = (allProduct ?? []).filter(p => p.price < 800);
+
 
     return(
         <> 
