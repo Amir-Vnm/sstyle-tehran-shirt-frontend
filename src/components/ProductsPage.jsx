@@ -186,22 +186,25 @@ const pageCount = Math.ceil(allProducts.length / itemsPerPage);
 </div>  
 
 
-<div className=" relative bg-white  grid grid-cols-3 pt-16 px-6 gap-2 w-5/6 mx-auto mt-10 h-[60vh] border-1 overflow-y-scroll">
+<div className=" relative bg-white mb-28 grid grid-cols-2 place-items-center md:grid-cols-4 pt-16 md:px-6 gap-2 md:gap-2 w-[96%] md:w-5/6 mx-auto mt-10 h-[60vh] border-1 overflow-y-scroll">
                
- <p className=" absolute text-center right-[45%] bg-teal-700 font-semibold text-white px-2 py-1 ">تمامی محصولات</p>
+ <p className=" absolute text-center top-0 right-28 md:right-[45%] bg-teal-700 font-semibold text-white px-2 py-1 ">تمامی محصولات</p>
   {loading && <div > <Loading /> </div>}
     {currentItems.map((p)=>(
-        <div key={p.id} className="border relative border-teal-600 text-center h-40  cursor-pointer bg-white p-1 rounded shadow flex flex-row justify-center items-center border-b">
-            <img className="w-full h-full  "   src={`https://style-tehran-shirt-backend.onrender.com/${p.imageUrl}`} alt={p.description || "لود نمیشود"} /> 
-            <h3 className="text-md break-words w-2/3  overflow-hidden ">{p.description}</h3>
-            <p className="text-sm text-gray-600">{p.price} تومان</p>
-            <button onClick={()=> handleDelete(p.id)} className=" absolute bottom-2 right-2  underline text-red-600 font-mono h-6 self-center rounded-2xl pb-1 cursor-pointer px-0.5 text-center ">حذف </button>
+        <div key={p.id} className="   relative border-teal-600 text-center h-40 w-full md:w-1/2 border  cursor-pointer bg-white p-1 rounded shadow flex flex-row justify-around  border-b">
+            <img className=" w-1/2 h-1/2 md:w-1/2 md:h-1/2  " src={`https://style-tehran-shirt-backend.onrender.com/${p.imageUrl}`} alt={p.description || "لود نمیشود"} /> 
+            <p className=" ">{p.inventory} موجودی </p>
+            <h3 className="text-md break-words w-2/3 absolute bottom-7 right-0  overflow-hidden ">{p.description}</h3>
+            <p className=" absolute right-0 top-12 text-sm text-gray-600">{p.price} تومان</p>
+            <button onClick={()=> handleDelete(p.id)} className=" absolute bottom-0 right-2  underline underline-offset-2 text-red-600 font-mono h-6 self-center rounded-2xl pb-1 cursor-pointer px-0.5 text-center ">حذف </button>
+            
             
 
           </div>
           
     ))}
-    <div className="flex justify-center mt-10 sticky  bottom-0 left-40  z-30 bg-gray-300 w-[900px] h-10 p-1 rounded-2xl">
+   
+ <div className="flex justify-center mt-20 -mb-40 -translate-x-[40%] md:-translate-x-[450px] z-30 bg-gray-300  h-10 p-1 rounded-2xl">
   <ReactPaginate
     previousLabel="قبلی"
     nextLabel="بعدی"
@@ -215,7 +218,6 @@ const pageCount = Math.ceil(allProducts.length / itemsPerPage);
     nextClassName=" w-12 text-center py-0.5 px-0.5 cursor-pointer border rounded-md text-gray-600 hover:bg-gray-200"
   />
 </div>
-
 </div>
               
    </>

@@ -62,7 +62,7 @@ const handleSearch = (e)=> {
             onChange={(e)=> setSearchTerm(e.target.value)} 
             type="text" name="" id="" placeholder="...لباس مورد نظر را جستجو کنید"
              />
-              <button className="bg-teal-500 border border-white absolute flex flex-row rounded px-1 py-0.5 font-mono cursor-pointer hover:scale-102 right-[10px] top-[30px] md:right-70 md:top-8  "
+              <button className="bg-teal-500 border border-white absolute flex flex-row rounded px-1 py-0.5 font-mono cursor-pointer hover:scale-102 right-[32%] top-[80px] md:right-[18%] md:top-8  "
               type="submit"> جستجو <img className=" w-[25px] md:w-6  " src={searchGif} alt="" />
              </button>
           

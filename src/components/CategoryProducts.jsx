@@ -4,7 +4,7 @@ import axios from "axios";
 import FavBtn from "./FavBtn";
 import AddToCartBtn from "./AddToCartBtn";
 import { Link } from "react-router-dom";
-
+import EndLine from './EndLine'
 
 function CategoryProducts( { product } ) {
   const { categoryId } = useParams();
@@ -40,7 +40,7 @@ const sortCheapFirst = () => {
   return (
     <div className="px-4 py-38 relative ">
           
-          <div className=" absolute top-28 w-full pr-46 right-0   items-center gap-x-10  bg-teal-700 h-10 text-white  flex flex-row-reverse">
+          <div className=" absolute top-[3%] md:top-28 w-full pr-[10px] md:pr-46 right-0 font-medium   items-center gap-x-10  bg-teal-700 h-10 text-white  flex flex-row-reverse">
             <p className=" font-bold">: دسته بندی بر اساس </p>
             <button onClick={sortCheapFirst} className="underline underline-offset-6 cursor-pointer hover:text-teal-200 " >ارزان ترین</button>
             <button onClick={sortExpensiveFirst} className=" underline underline-offset-6  cursor-pointer hover:text-teal-200" >گران ترین</button>
@@ -50,7 +50,7 @@ const sortCheapFirst = () => {
 
 
       {products.length > 0 ? (
-        <div className="grid grid-cols-4 gap-x-24 gap-y-14 w-5/6 mx-auto  mt-30 mb-10   transition   rounded  shadow-md">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-x-5 md:gap-x-24 gap-y-14 w-[100%] md:w-5/6 mx-auto mt-[4%] md:mt-30 mb-10   transition   rounded  shadow-md">
           {products.map((p) => (
             
             <div key={p.id} className=" relative border border-black/30   bg-white cursor-pointer shadow-sm hover:shadow-md hover:border-teal-500 hover:shadow-teal-500 hover:scale-101  shadow-gray-500 ">
@@ -73,7 +73,9 @@ const sortCheapFirst = () => {
       ) : (
         <p className="text-gray-500">محصولی برای این دسته‌بندی یافت نشد</p>
       )}
+      <EndLine />
     </div>
+    
   );
 }
 

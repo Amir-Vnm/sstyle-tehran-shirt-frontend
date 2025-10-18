@@ -17,6 +17,9 @@ useEffect(()=>{
         const res = await fetch("https://style-tehran-shirt-backend.onrender.com/api/Category") ;
         const data = await res.json() ;
         setCategories(data.data) ;
+        if(!res.ok) {
+          throw new Error(`HTTP error! status: ${res.status}`);
+        }
         
     } catch(err) {
         console.log("error getting data first image slider")
@@ -49,10 +52,10 @@ useEffect(()=>{
         modules={[Navigation, Pagination, Autoplay]}
         navigation
         pagination={{ clickable: true }}
-        autoplay={{ delay: 2000 , 
+        autoplay={{ delay: 3500 , 
           pauseOnMouseEnter: true
          }}
-        speed={3000}
+        speed={2000}
         className="h-full w-full  "
         breakpoints={{
     640: {
@@ -69,11 +72,11 @@ useEffect(()=>{
       >
        {categories.map((e) => (
         <SwiperSlide key={e.id} >
-  <div  className=" flex items-center  bg-red-500 w-full md:h-[50vh]  relative border-x-3 border-teal-800">
+  <div  className=" flex items-center  bg-teal-700 w-full md:h-[50vh]  relative border-x-3 border-teal-800">
     <Link to={`Products/ByCategory/${e.id}`} >
-     <img src={`https://style-tehran-shirt-backend.onrender.com${e.imageUrl}`} 
+     <img src={`https://style-tehran-shirt-backend.onrender.com/${e.imageUrl}`} 
       alt={e.name}  className=" w-full p-0  md:h-[50vh] object-cover rounded " />
-     <p className=" absolute bottom-16 text-teal-600 text-shadow-sm/80 text-shadow-black left-2 underline underline-offset-7 text-2xl" >{e.name}</p>
+     <p className=" absolute bottom-[20px] md:bottom-16 text-teal-600 text-shadow-sm/80 text-shadow-black left-2 underline underline-offset-7 text-2xl" >{e.name}</p>
      </Link>
   </div>
       </SwiperSlide>

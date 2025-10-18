@@ -56,9 +56,9 @@ useEffect(()=>{
                     <img className='w-40 ml-44 hidden md:block  ' src={logo} alt="" />
                  
               <nav className=' flex flex-col text-[1.5rem] md:text-3xl gap-y-10  mt-30 font-mono text-right ' >
-                <Link to='/' className='border-b border-black/15 pr-8 hover:text-teal-800 ' > خانه</Link> 
-                <Link to='/AboutUs' className='border-b border-black/15 pr-8 hover:text-teal-800 ' >درباره ما</Link>
-                <Link to='/ContactUs' className='border-b border-black/15 pr-8 hover:text-teal-800 ' >تماس با ما</Link>
+                <Link to='/' onClick={()=> setIsopen(false)} className='border-b border-black/15 pr-8 hover:text-teal-800 ' > خانه</Link> 
+                <Link to='/AboutUs' onClick={()=> setIsopen(false)} className='border-b border-black/15 pr-8 hover:text-teal-800 ' >درباره ما</Link>
+                <Link to='/ContactUs' onClick={()=> setIsopen(false)} className='border-b border-black/15 pr-8 hover:text-teal-800 ' >تماس با ما</Link>
              
 
               </nav>

@@ -52,22 +52,22 @@ function ProductDetails() {
   if (!product) return <p className="text-center text-gray-500 mt-10">محصولی یافت نشد</p>;
 
   return (
-   <section className="px-6 pt-30 relative flex flex-row-reverse justify-between ">
-         <p className=" w-2/3 absolute text-center py-2 px-1 font-mono text-2xl border-b-1 mb-2 font-semibold text-gray-800 border-black/40 ">{product.description}  </p>
+   <section className="px-6 pt-[16%] md:pt-30 relative flex flex-row-reverse justify-between ">
+         <p className=" w-[90%] mx-auto md:mx-auto md:w-1/3 right-1/5 absolute text-center py-2 px-1 font-mono text-2xl border-b-1 mb-2 font-semibold text-gray-800 border-black/40 ">{product.description}  </p>
                                    
-           <article className=" relative bg-white mt-30 mr-48 border w-2/4 h-[30vh] rounded-4xl border-black/10 shadow-sm shadow-teal-500 overflow-hidden " >
-            <p className="text-center border-b pr-4 pt-1 pb-1 border-black/30 text-lg font-mono " > مشخصات</p>
-              <div className="grid grid-cols-2  place-items-center text-center gap-x-10 gap-y-6 pt-5 align-middle text-black/70 font-semibold italic " >
-                      <div className=" relative w-60 h-20 border-1 text-center rounded-2xl shadow-sm/60 flex justify-center items-center  shadow-amber-300 border-black/10" >
+           <article className=" absolute bottom-60 md:bottom-0 left-[3%] md:left-0 md:relative bg-white mt-30 mr-48 border w-[94%] md:w-2/4 min-h-80 md:h-[30vh] rounded-4xl border-black/10 shadow-sm shadow-teal-500 overflow-hidden " >
+            <p className="text-center border-b pr-4 pt-1 pb-1 border-black/30 text-2xl md:text-lg font-mono " > مشخصات</p>
+              <div className="grid grid-cols-2  place-items-center text-center gap-x-5 md:gap-x-10 gap-y-6  pt-5  align-middle text-black/70 font-semibold italic " >
+                      <div className=" relative w-[150px] md:w-60 min-h-[15vh] md:min-h-20 md:h-20 border-1 text-center rounded-2xl shadow-sm/60 flex justify-center items-center  shadow-amber-300 border-black/10" >
                      <p className="pt-2"> جنس : نخ</p> <img className=" absolute top-0 right-0 w-10" src={leather} alt="" />
                       </div>
-                      <div className=" relative w-60 h-20 border-1 text-center rounded-2xl shadow-sm/60 flex justify-center items-center  shadow-amber-300 border-black/10">
+                      <div className=" relative w-[150px] md:w-60 min-h-[15vh] md:min-h-20 md:h-20  border-1 text-center rounded-2xl shadow-sm/60 flex justify-center items-center  shadow-amber-300 border-black/10">
                       <p className="pt-2"> مناسب فصل : تابستان </p><img className=" absolute top-0 right-0 w-10" src={sunicon} alt="" />
                       </div>
-                      <div className=" relative w-60 h-20 border-1 text-center rounded-2xl shadow-sm/60 flex justify-center items-center  shadow-amber-300 border-black/10">
+                      <div className=" relative w-[150px] md:w-60 min-h-[15vh] md:min-h-20 md:h-20 border-1 text-center rounded-2xl shadow-sm/60 flex justify-center items-center  shadow-amber-300 border-black/10">
                        <p className="pt-2"> xl - md - sm - xx : سایز </p><img className=" absolute top-0 right-0 w-9" src={iconsize} alt="" />
                        </div>
-                      <div className=" relative w-60 h-20 border-1 text-center rounded-2xl shadow-sm/60 flex justify-center items-center  shadow-amber-300 border-black/10">
+                      <div className=" relative w-[150px] md:w-60 min-h-[15vh] md:min-h-20 md:h-20 border-1 text-center rounded-2xl shadow-sm/60 flex justify-center items-center  shadow-amber-300 border-black/10">
                      <p className="pt-2"> رنگبندی : قرمز-سفید-آبی </p><img className=" absolute top-0 right-0 w-8" src={colorp} alt="" />
                      </div>
 
@@ -75,7 +75,7 @@ function ProductDetails() {
               </div>
            </article>
            
-             <div className=" absolute -bottom-16 left-[5%]   flex flex-row gap-x-6 ">
+             <div className=" absolute bottom-[8%] md:-bottom-16 left-10 md:left-[54%]   flex flex-row gap-x-6 ">
                  <img src={shareicon} alt="" className="w-8 h-8" /> 
                  <p className="pr-2 text-center text-sky-600">share on</p>
                   
@@ -92,7 +92,7 @@ function ProductDetails() {
 
 
     
-    <div className=" absolute right-50 top-[85%] w-1/2  shadow-sm shadow-black/40 bg-white  inset-shadow-xs inset-shadow-teal-500 border-black/20 rounded-4xl text-right py-2 px-1  " >
+    <div className=" absolute  right-[5%] md:right-50 top-[85%] w-[90%] md:w-1/2  shadow-sm shadow-black/40 bg-white  inset-shadow-xs inset-shadow-teal-500 border-black/20 rounded-4xl text-right py-2 px-1  " >
       <button onClick={()=> setIsOpen(prev=> !prev)} className="text-center w-full border-b border-black/30 font-mono text-lg cursor-pointer " >《   نظرات کاربران   》</button>
       {isOpen && < div className="h-50 overflow-scroll mt-6 px-6 py-4 flex mx-4 rounded-4xl flex-col gap-y-4 bg-gray-500">  
              <p className="text-white" > ★  بسیار عالی »»» امتیاز :5/5  »»»  soheil </p>
@@ -110,8 +110,8 @@ function ProductDetails() {
 
 
 
-       <div className="w-1/4 pl-4 "  >
-      <div className="relative border border-black/30 bg-white shadow-md    max-w-3xl mx-auto">
+       <div className= " w-[94%] mx-auto md:w-1/4 md:pl-4 mt-[90px] md:mt-0 mb-[80vh] md:mb-0 "  >
+      <div className="relative border  border-black/30 bg-white shadow-md    max-w-3xl mx-auto">
 
         <img
           src={`https://style-tehran-shirt-backend.onrender.com/${product.imageUrl}`}

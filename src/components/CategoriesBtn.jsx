@@ -67,7 +67,7 @@ const handleDelete = async (id) => {
                
     return(
         <>
-           <div>
+           <div className=" overflow-x-hidden">
       <Select
         options={categories}
         onChange={handleCategories}
@@ -79,11 +79,11 @@ const handleDelete = async (id) => {
 
       <div className="p-4   bg-gray-300" >
         {products.length > 0 ? (
-         <div className="grid grid-cols-6 gap-x-10 gap-y-4 ">
+         <div className=" flex flex-row md:grid md:grid-cols-6 gap-x-2 py-4 md:py-0 md:gap-x-10 gap-y-4 overflow-x-auto md:overflow-x-hidden  ">
             {products.map((p) => (
               <div
                 key={p.id}
-                className="rounded-lg w-58 relative h-40 border-teal-600/70 border-1  bg-white flex flex-col "
+                className="rounded-lg min-w-[170px] md:w-58 relative h-40 border-teal-600/70 border-1  bg-white flex flex-col "
               >
              
                 <img

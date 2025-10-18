@@ -16,12 +16,10 @@ export default function MainContent() {
 <NewCollection />
 <FirstImageSlider />
 <SecondImageSlider />
-
 <BranchCompany />
 <TrustSection />
-
-
 <EndLine />  
+
         </section>
     )
 }

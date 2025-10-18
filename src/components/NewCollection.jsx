@@ -66,7 +66,7 @@ export default function NewCollection() {
               
 
 
-            <p className=" md:hidden text-right text-sm leading-relaxed  pr-1 overflow-scroll border-teal-800  ">
+            <p className=" md:hidden text-right text-xl leading-relaxed  pr-1 overflow-scroll border-teal-800  ">
             طراحی جدید  اورسایز و راحت  
             که ظاهری شیک و بی‌دردسر را به شما هدیه می‌دهد. این مدل، نسخه‌ای
             آزادتر از مدل معروف قبلی است که با فرم جذب و برش دقیق شناخته

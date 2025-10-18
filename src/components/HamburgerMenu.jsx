@@ -13,8 +13,8 @@ export default function  HamburgerMenu(  ) {
      
         <button
           onClick={() => setOpen(!open)}
-          className="w-14 h-14 relative focus:outline-none bg-teal-600 rounded hover:cursor-pointer hover:scale-104 transition"
-        >
+          className="  h-[35px] w-[20px] pr-14 rotate-180 md:pr-0 md:h-14 md:w-14 relative focus:outline-none bg-teal-600 rounded hover:cursor-pointer hover:scale-104 transition"
+        > 
           <div className="block w-5 absolute left-6 top-1/2 transform -translate-x-1/2 -translate-y-1/2">
             <span
               className={`block absolute h-0.5 w-7 bg-white transform transition duration-500 ease-in-out ${

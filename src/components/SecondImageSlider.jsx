@@ -45,17 +45,17 @@ const offProduct = (allProduct ?? []).filter(p => p.price < 800);
     prevEl: '.swiper-button-prev',
   }}
   pagination={{ clickable: true   }}
-  autoplay={{ delay: 0 , pauseOnMouseEnter:true , disableOnInteraction:true }}
+  autoplay={{ delay: 4000 , pauseOnMouseEnter:true , disableOnInteraction:true }}
   loop={false}
-  speed={6000}
+  speed={2000}
   breakpoints={{
     300: {
       slidesPerView: 2,
       spaceBetween: 10 ,
     } ,
    1024:{slidesPerView: 5,
-      spaceBetween: 12 ,
-    slidesPerGroup : 2, }}}
+         spaceBetween: 12 ,
+         slidesPerGroup : 2, }}}
   grid={{
     rows: 2,
     fill: 'row'
@@ -70,7 +70,7 @@ const offProduct = (allProduct ?? []).filter(p => p.price < 800);
                  
                 <div key={e.id} className=" relative  md:w-56 mx-auto mb-10 h-[40vh] md:h-80 bg-white border-1 border-gray-300 hover:shadow-md transition cursor-pointer hover:scale-101 rounded  shadow-md shadow-black inset-shadow-2xs  inset-shadow-teal-500 hover:border-teal-400 hover:shadow-teal-600 overflow-hidden break-words  " >
                     <Link to={`/Products/${e.id}`}>
-               <img className="w-full h-[20vh] md:h-50" src={`https://style-tehran-shirt-backend.onrender.com${e.imageUrl}`}
+               <img className="w-full h-[20vh] md:h-50" src={`https://style-tehran-shirt-backend.onrender.com/${e.imageUrl}`}
                loading="lazy"  alt={e.description || "لود نمیشود"} /> 
                    </Link>
                    <p className="text-center p-1 font-mono text-md" >{e.description}</p>

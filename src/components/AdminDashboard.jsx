@@ -19,7 +19,7 @@ export default function AdminDashboard( {hamburger,  } ) {
     return(
         <>
  <section className="relative z-30 " >    
-<div className="  absolute right-2 top-38 z-50 " onClick={()=> setMenu(prev => !prev)} role="button" >{hamburger}</div>
+<div className="  absolute right-2 top-[60px] md:top-38 z-50 " onClick={()=> setMenu(prev => !prev)} role="button" >{hamburger}</div>
 {menu && (
         <div
           className=" absolute w-screen h-32 -top-31 backdrop-blur-[2px]  bg-black/10 z-20"></div>

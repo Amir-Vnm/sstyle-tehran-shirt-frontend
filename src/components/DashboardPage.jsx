@@ -10,12 +10,12 @@ export default function DashboardPage() {
     return(
         <>
         
-        <section className="flex flex-row justify-center gap-x-40 pt-30 w-4/5 mx-auto  ">
+        <section className="flex flex-col justify-center gap-x-40 pt-30 w-4/5 mx-auto  ">
 
-<div className="w-full h-80 bg-black/80  shadow-md shadow-teal-800 border-4 border-white flex flex-col items-center  space-y-4 p-4">
+<div className=" w-full md:h-80 bg-black/80  shadow-md shadow-teal-800 border-4 border-white flex flex-col items-center  space-y-4 p-4">
   <p className="text-white text-2xl  border-b w-full text-center pb-1 ">پر بازدیدترین دسته‌بندی‌ها</p>
 
-           <div className=" grid grid-cols-2 place-items-center gap-x-40 gap-y-2  ">   
+           <div className=" grid grid-cols-2 place-items-center gap-x-10 md:gap-x-40 gap-y-2  ">   
             <p className="text-white font-[cursive] text-xl ">هودی</p>
             <p className="text-white font-[cursive] text-xl" >تی شرت</p>
             <img className='w-40 h-40 rounded-3xl' src={h1} alt="" />         
@@ -27,7 +27,7 @@ export default function DashboardPage() {
   <p className="text-white text-sm mt-2">.این دسته‌بندی‌ها بر اساس بازدید کاربران در ماه گذشته انتخاب شده‌اند</p>   
 </div>
 
-<div className="w-full  h-80 bg-black/80 shadow-md shadow-teal-800 border-4 border-white flex flex-col items-center  space-y-4 p-4" >
+<div className="w-full  md:h-80 bg-black/80 shadow-md shadow-teal-800 border-4 border-white flex flex-col items-center  space-y-4 p-4" >
      
    <div className="grid grid-cols-2 gap-4 mt-6">
   <div className="bg-white p-6 rounded shadow text-center">
