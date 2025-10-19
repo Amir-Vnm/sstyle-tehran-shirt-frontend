@@ -254,7 +254,7 @@ const handleDelete = async (id) => {
         {allCategories.length > 0 ? (
           allCategories.map((e, i) => (
             <div key={i} className="border-1 bg-gray-300 border-teal-600 rounded-2xl  mb-4  min-w-[160px] h-[240px]   md:w-60 md:h-56 flex flex-col text-center">
-              <img src={`https://style-tehran-shirt-backend.onrender.com/${e.imageUrl}`} alt="تصویر دسته‌بندی" className=" w-full  rounded-t-2xl  object-center overflow-hidden" />
+              <img src={`https://style-tehran-shirt-backend.onrender.com${e.imageUrl}`} alt="تصویر دسته‌بندی" className=" w-full  rounded-t-2xl  object-center overflow-hidden" />
               <p className="text-2xl text-gray-700 ">{e.name}</p>
               <p  >{e.id} : شماره</p>
 

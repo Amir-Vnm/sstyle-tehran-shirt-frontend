@@ -78,7 +78,7 @@ const handleSearch = (e)=> {
            <div className="border border-white p-1 mr-1 text-center cursor-pointer bg-white rounded shadow flex flex-row justify-center border-b">
            <h3 className="text-md break-words w-2/3 h-20 overflow-hidden ">{p.description}</h3>
            <p className="text-sm text-gray-600">{p.price} تومان</p>
-          <img className="w-20 h-20 " src={`https://style-tehran-shirt-backend.onrender.com/${p.imageUrl}`} alt={p.description || "لود نمیشود"} /> 
+          <img className="w-20 h-20 " src={`https://style-tehran-shirt-backend.onrender.com${p.imageUrl}`} alt={p.description || "لود نمیشود"} /> 
             
 
           </div>
