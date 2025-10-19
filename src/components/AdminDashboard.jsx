@@ -18,7 +18,7 @@ export default function AdminDashboard( {hamburger,  } ) {
 
     return(
         <>
- <section className="relative z-30 w-full overflow-x-hidden md:w-auto " >    
+ <section className="relative z-30 w-full h-screen overflow-x-hidden md:w-auto " >    
 <div className="  absolute right-2 top-[60px] md:top-38 z-50 " onClick={()=> setMenu(prev => !prev)} role="button" >{hamburger}</div>
 {menu && (
         <div
