@@ -16,9 +16,10 @@ const [allProduct, setAllProduct] = useState([]) ;
 
 useEffect(()=> {
     const fetchData = async()=> {
-        const res = await fetch("https://style-tehran-shirt-backend.onrender.com/api/Products") 
+        const res = await fetch("https://style-tehran-shirt-nodejs.onrender.com/api/products") 
         const data = await res.json() ;
-        setAllProduct(data.data)
+        setAllProduct(data)
+        
        
         
         
@@ -26,8 +27,8 @@ useEffect(()=> {
     fetchData() ;
 } , [])
 
+{/*const offProduct = (allProduct ?? []).filter(p => p.price < 800); */}
 
-const offProduct = (allProduct ?? []).filter(p => p.price < 800);
 
 
     return(
@@ -63,19 +64,19 @@ const offProduct = (allProduct ?? []).filter(p => p.price < 800);
 
 >
   
-         {allProduct ? offProduct.map((e)=> {
+         {allProduct ? allProduct.map((e)=> {
           
             return(
                 <SwiperSlide >
                  
                 <div key={e.id} className=" relative  md:w-56 mx-auto mb-10 h-[40vh] md:h-80 bg-white border-1 border-gray-300 hover:shadow-md transition cursor-pointer hover:scale-101 rounded  shadow-md shadow-black inset-shadow-2xs  inset-shadow-teal-500 hover:border-teal-400 hover:shadow-teal-600 overflow-hidden break-words  " >
                     <Link to={`/Products/${e.id}`}>
-               <img className="w-full h-[20vh] md:h-50" src={`https://style-tehran-shirt-backend.onrender.com${e.imageUrl}`}
-               loading="lazy"  alt={e.description || "لود نمیشود"} /> 
+               <img className="w-full h-[20vh] md:h-50" src={`https://style-tehran-shirt-nodejs.onrender.com${e.ImageFile}`}
+               loading="lazy"  alt={e.Description || "لود نمیشود"} /> 
                    </Link>
-                   <p className="text-center p-1 font-mono text-md" >{e.description}</p>
-                    <p className="text-center pt-1 font-bold  bg-black/10"> {` ت ${e.price}  `} </p>
-                    <p className=" absolute right-0  bg-black/20 rounded bottom-0 z-10 px-1" >موجود: {e.inventory}</p>
+                   <p className="text-center p-1 font-mono text-md" >{e.Description}</p>
+                    <p className="text-center pt-1 font-bold  bg-black/10"> {` ت ${e.Price}  `} </p>
+                    <p className=" absolute right-0  bg-black/20 rounded bottom-0 z-10 px-1" >موجود: {e.Inventory}</p>
                    <div className=" absolute top-0 left-0 hover:scale-108 " > <FavBtn product={e} /></div>
                    <div className=" absolute bottom-0 left-0" > <AddToCartBtn product={e} /> </div>
                   

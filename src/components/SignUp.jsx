@@ -71,9 +71,9 @@ export default function SignUpForm() {
           className="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-teal-300"
         >
           <option className=' hover:bg-teal-200' value="user">user</option>
-          <option value="admin">admin</option>
+         {/* <option value="admin">admin</option> */}
         </select>
-
+     
         <button
           type="submit"
           className="w-full bg-teal-800 text-white py-2 rounded hover:bg-teal-500 cursor-pointer transition"

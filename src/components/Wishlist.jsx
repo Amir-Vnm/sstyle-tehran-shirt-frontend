@@ -32,22 +32,25 @@ const { wishlist , toggleWishlist  } = useShopStore() ;
       
            <div className='text-center '>
              <p className='text-center mt-8 text-[27px] md:text-5xl font-mono text-black/70' >علاقه مندی ها</p>
-               <div className='mt-[60px] md:mt-0'>    
+               <div className='mt-[60px] md:mt-0 '>  
+               
                {wishlist.map((e)=> (
-
-              <Link to={`/Products/${e.id}`}>
-                <div key={e.id} className=' w-full h-full relative flex flex-row  items-center justify-around   mr-4 mt-[10px] md:mt-10 border-y bg-gray-100 border-black/30 overflow-hidden hover:scale-101 transition shadow-sm shadow-black/30 hover:shadow-md ' >
+                <Link key={e.id} to={`/Products/${e.id}`}> 
+              
+                <div className=' w-full h-full relative flex flex-row  items-center justify-around   mr-4 mt-[10px] md:mt-10 border-y bg-gray-100 border-black/30 overflow-hidden hover:scale-101 transition shadow-sm shadow-black/30 hover:shadow-md ' >
+                  
                   
                       <img className=" h-[60px] md:h-22   " src={`https://style-tehran-shirt-backend.onrender.com/${e.imageUrl}`} alt={e.description || "لود نمیشود"} />
                       <p className="text-right p-1 text-md  font-mono w-2/4 break-words  " >{e.description}</p>
                       <p className="text-center pt-1 font-bold underline underline-offset-5"> {` تومان ${e.price}  `} </p>
                      <button onClick={()=> toggleWishlist(e)  } className='border rounded-4xl bg-red-200 border-white hover:scale-110 cursor-pointer' >❌</button>
                    
+                
                 </div>
-                 </Link>
+                
                 
             
-               ))  }
+            </Link>   ))  } 
                </div> 
 
 

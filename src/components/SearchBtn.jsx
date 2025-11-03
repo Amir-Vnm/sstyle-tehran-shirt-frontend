@@ -19,8 +19,8 @@ const [filteredProducts , setFilteredProducts] = useState([]) ;
 useEffect(()=> {
      const fetchProducts = async ()=> {
       try {
-        const res = await axios.get("https://style-tehran-shirt-backend.onrender.com/api/Products") ;
-        setProducts(res.data.data) ;
+        const res = await axios.get("https://style-tehran-shirt-nodejs.onrender.com/api/products") ;
+        setProducts(res.data) ;
 
       } catch (error) {
         console.error('error getting products for search btn')
@@ -33,8 +33,8 @@ useEffect(()=> {
 const handleSearch = (e)=> { 
   e.preventDefault() ;
   
- const result =  products.filter(product => typeof product.description === 'string')
-  .filter(product => product.description.toLowerCase().includes(searchTerm.toLowerCase())
+ const result =  products.filter(product => typeof product.Description === 'string')
+                         .filter(product => product.Description.toLowerCase().includes(searchTerm.toLowerCase())
   );
   setFilteredProducts(result) ;
   
@@ -58,7 +58,7 @@ const handleSearch = (e)=> {
            <button onClick={()=> setIsopen(false)  } type="button"
            className="  hover:scale-106 cursor-pointer transition w-10 ring-2 rounded-full bg-white text-red-400 mr-1 " >X</button>
            <input className="w-2/3 h-12 focus:outline-none rounded focus:ring-teal-700 focus:ring-2 border-black/30 text-center md:text-2xl  text-w mt-6 caret-black"
-            value={searchTerm || ''} 
+            value={searchTerm} 
             onChange={(e)=> setSearchTerm(e.target.value)} 
             type="text" name="" id="" placeholder="...لباس مورد نظر را جستجو کنید"
              />
@@ -69,16 +69,13 @@ const handleSearch = (e)=> {
             </form>
 
 
-           
-           
-
       {filteredProducts.length > 0 && <div className={` relative grid grid-cols-3 gap-0.5 bg-teal-700 overflow-x-hidden overflow-y-scroll w-2/4 h-[20vh]   mx-auto border-2 rounded  border-teal-700  mt-  z-50 transition-transform ${isOpen ? "translate-y-4" : "-translate-y-150"}`}>
           {filteredProducts.map(p => (
            <Link to={`/Products/${p.id}`} key={p.id}>
            <div className="border border-white p-1 mr-1 text-center cursor-pointer bg-white rounded shadow flex flex-row justify-center border-b">
-           <h3 className="text-md break-words w-2/3 h-20 overflow-hidden ">{p.description}</h3>
-           <p className="text-sm text-gray-600">{p.price} تومان</p>
-          <img className="w-20 h-20 " src={`https://style-tehran-shirt-backend.onrender.com${p.imageUrl}`} alt={p.description || "لود نمیشود"} /> 
+           <h3 className="text-md break-words w-2/3 h-20 overflow-hidden ">{p.Description}</h3>
+           <p className="text-sm text-gray-600">{p.Price} تومان</p>
+          <img className="w-20 h-20 " src={`https://style-tehran-shirt-nodejs.onrender.com${p.ImageFile}`} alt={p.Description || "لود نمیشود"} /> 
             
 
           </div>
@@ -87,10 +84,7 @@ const handleSearch = (e)=> {
       </div>}
 
             
-              </div>
-        
-                           
-                           
+              </div>   
 
         </>
     )

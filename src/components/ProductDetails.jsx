@@ -34,8 +34,8 @@ function ProductDetails() {
   useEffect(() => {
     async function fetchProduct() {
       try {
-        const { data } = await axios.get(`https://style-tehran-shirt-backend.onrender.com/api/Products/${id}`);
-        setProduct(data.data); 
+        const { data } = await axios.get(`https://style-tehran-shirt-nodejs.onrender.com/api/products/${id}`);
+        setProduct(data); 
       } catch (error) {
         console.error("Error fetching product:", err);
         setError("خطا در دریافت اطلاعات محصول");
@@ -53,7 +53,7 @@ function ProductDetails() {
 
   return (
    <section className="px-6 pt-[16%] md:pt-30 relative flex flex-row-reverse justify-between ">
-         <p className=" w-[90%] mx-auto md:mx-auto md:w-1/3 right-1/5 absolute text-center py-2 px-1 font-mono text-2xl border-b-1 mb-2 font-semibold text-gray-800 border-black/40 ">{product.description}  </p>
+         <p className=" w-[90%] mx-auto md:mx-auto md:w-1/3 right-1/5 absolute text-center py-2 px-1 font-mono text-2xl border-b-1 mb-2 font-semibold text-gray-800 border-black/40 ">{product.Description}  </p>
                                    
            <article className=" absolute bottom-60 md:bottom-0 left-[3%] md:left-0 md:relative bg-white mt-30 mr-48 border w-[94%] md:w-2/4 min-h-80 md:h-[30vh] rounded-4xl border-black/10 shadow-sm shadow-teal-500 overflow-hidden " >
             <p className="text-center border-b pr-4 pt-1 pb-1 border-black/30 text-2xl md:text-lg font-mono " > مشخصات</p>
@@ -114,11 +114,11 @@ function ProductDetails() {
       <div className="relative border  border-black/30 bg-white shadow-md    max-w-3xl mx-auto">
 
         <img
-          src={`https://style-tehran-shirt-backend.onrender.com${product.imageUrl}`}
-          alt={product.name}
+          src={`https://style-tehran-shirt-nodejs.onrender.com${product.ImageFile}`}
+          alt={product.Name}
           className="w-full h-80 object-cover mb-4 "
         />
-        <p className="font-bold text-center my-4 bg-gray-200 py-2 rounded">قیمت: {product.price} تومان</p>        
+        <p className="font-bold text-center my-4 bg-gray-200 py-2 rounded">قیمت: {product.Price} تومان</p>        
       </div>
             <div className=" text-md text-center hover:scale-101 transition mt-6 rounded-4xl hover:shadow-md font-mono font-semibold border-red-300 border-1 shadow-sm shadow-red-300"><FavBtn product={product} />  افزودن به لیست علاقه مندی ها </div>
             <div className=" text-lg flex flex-row justify-center items-center gap-x-14 hover:scale-101 hover:shadow-md transition font-mono font-semibold mt-6 rounded-4xl  border-teal-600 border-1 shadow-sm shadow-teal-500">
