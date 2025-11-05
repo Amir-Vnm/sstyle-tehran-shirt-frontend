@@ -52,8 +52,7 @@ const handleSubmit = async (e) => {
     });
 
     const result = await response.json();
-    console.log("🟢 status:", response.status);
-    console.log("🟠 result:", result);
+  
 
     if (response.ok) {
       Swal.fire({
