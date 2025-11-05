@@ -1,16 +1,10 @@
-services:
-  - type: web
-    name: style-tehran-shirt-frontend
-    env: static
-    staticPublishPath: build
-    buildCommand: npm run build
-    routes:
-      - type: rewrite
-        source: /admin/*
-        destination: /
-      - type: rewrite
-        source: /products/*
-        destination: /
-      - type: rewrite
-        source: /*
-        destination: /
+routes:
+  - type: rewrite
+    source: /admin/*
+    destination: /
+  - type: rewrite
+    source: /products/*
+    destination: /
+  - type: rewrite
+    source: /*
+    destination: /
