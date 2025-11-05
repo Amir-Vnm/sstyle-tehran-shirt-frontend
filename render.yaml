@@ -1,13 +1,19 @@
-routes:
-  - type: rewrite
-    source: /admin
-    destination: /
-  - type: rewrite
-    source: /admin/*
-    destination: /
-  - type: rewrite
-    source: /products/*
-    destination: /
-  - type: rewrite
-    source: /*
-    destination: /
+services:
+  - type: web
+    name: sstyle-tehran-shirt-frontend
+    env: static
+    buildCommand: npm run build
+    staticPublishPath: build
+    routes:
+      - type: rewrite
+        source: /admin
+        destination: /
+      - type: rewrite
+        source: /admin/*
+        destination: /
+      - type: rewrite
+        source: /products/*
+        destination: /
+      - type: rewrite
+        source: /*
+        destination: /
