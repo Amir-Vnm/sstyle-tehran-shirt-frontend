@@ -3,7 +3,7 @@ services:
     name: sstyle-tehran-shirt-frontend
     env: static
     buildCommand: npm run build
-    staticPublishPath: build
+    staticPublishPath: dist
     routes:
       - type: rewrite
         source: /admin
