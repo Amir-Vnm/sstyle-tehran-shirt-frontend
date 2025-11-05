@@ -11,6 +11,7 @@ import whatsapp from '../images/whatsapp.png'
 import telegram from '../images/telegram.png'
 import instagram from '../images/instagram.png'
 import shareicon from '../images/share.png'
+import Loading from "./Loading";
 
 
 
@@ -47,27 +48,27 @@ function ProductDetails() {
     fetchProduct();
   }, [id]);
 
-  if (loading) return <p className="text-center mt-10">در حال بارگذاری...</p>;
+  if (loading) return <Loading />;
   if (error) return <p className="text-center text-red-500 mt-10">{error}</p>;
   if (!product) return <p className="text-center text-gray-500 mt-10">محصولی یافت نشد</p>;
 
   return (
    <section className="px-6 pt-[16%] md:pt-30 relative flex flex-row-reverse justify-between ">
-         <p className=" w-[90%] mx-auto md:mx-auto md:w-1/3 right-1/5 absolute text-center py-2 px-1 font-mono text-2xl border-b-1 mb-2 font-semibold text-gray-800 border-black/40 ">{product.Description}  </p>
+         <p className=" w-[90%] mx-auto md:mx-auto md:w-1/3 md:right-1/5 absolute text-center py-2 px-1 font-mono text-2xl border-b-1 mb-2 font-semibold text-gray-800 border-black/40 ">{product.Description}  </p>
                                    
            <article className=" absolute bottom-60 md:bottom-0 left-[3%] md:left-0 md:relative bg-white mt-30 mr-48 border w-[94%] md:w-2/4 min-h-80 md:h-[30vh] rounded-4xl border-black/10 shadow-sm shadow-teal-500 overflow-hidden " >
             <p className="text-center border-b pr-4 pt-1 pb-1 border-black/30 text-2xl md:text-lg font-mono " > مشخصات</p>
               <div className="grid grid-cols-2  place-items-center text-center gap-x-5 md:gap-x-10 gap-y-6  pt-5  align-middle text-black/70 font-semibold italic " >
-                      <div className=" relative w-[150px] md:w-60 min-h-[15vh] md:min-h-20 md:h-20 border-1 text-center rounded-2xl shadow-sm/60 flex justify-center items-center  shadow-amber-300 border-black/10" >
+                      <div className=" relative w-[150px] md:w-60 min-h-[14vh] md:min-h-20 md:h-20 border-1 text-center rounded-2xl shadow-sm/60 flex justify-center items-center  shadow-amber-300 border-black/10" >
                      <p className="pt-2"> جنس : نخ</p> <img className=" absolute top-0 right-0 w-10" src={leather} alt="" />
                       </div>
-                      <div className=" relative w-[150px] md:w-60 min-h-[15vh] md:min-h-20 md:h-20  border-1 text-center rounded-2xl shadow-sm/60 flex justify-center items-center  shadow-amber-300 border-black/10">
+                      <div className=" relative w-[150px] md:w-60 min-h-[14vh] md:min-h-20 md:h-20  border-1 text-center rounded-2xl shadow-sm/60 flex justify-center items-center  shadow-amber-300 border-black/10">
                       <p className="pt-2"> مناسب فصل : تابستان </p><img className=" absolute top-0 right-0 w-10" src={sunicon} alt="" />
                       </div>
-                      <div className=" relative w-[150px] md:w-60 min-h-[15vh] md:min-h-20 md:h-20 border-1 text-center rounded-2xl shadow-sm/60 flex justify-center items-center  shadow-amber-300 border-black/10">
+                      <div className=" relative w-[150px] md:w-60 min-h-[14vh] md:min-h-20 md:h-20 border-1 text-center rounded-2xl shadow-sm/60 flex justify-center items-center  shadow-amber-300 border-black/10">
                        <p className="pt-2"> xl - md - sm - xx : سایز </p><img className=" absolute top-0 right-0 w-9" src={iconsize} alt="" />
                        </div>
-                      <div className=" relative w-[150px] md:w-60 min-h-[15vh] md:min-h-20 md:h-20 border-1 text-center rounded-2xl shadow-sm/60 flex justify-center items-center  shadow-amber-300 border-black/10">
+                      <div className=" relative w-[150px] md:w-60 min-h-[14vh] md:min-h-20 md:h-20 border-1 text-center rounded-2xl shadow-sm/60 flex justify-center items-center  shadow-amber-300 border-black/10">
                      <p className="pt-2"> رنگبندی : قرمز-سفید-آبی </p><img className=" absolute top-0 right-0 w-8" src={colorp} alt="" />
                      </div>
 
