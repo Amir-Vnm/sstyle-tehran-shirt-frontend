@@ -6,14 +6,5 @@ services:
     staticPublishPath: dist
     routes:
       - type: rewrite
-        source: /admin
-        destination: /
-      - type: rewrite
-        source: /admin/*
-        destination: /
-      - type: rewrite
-        source: /products/*
-        destination: /
-      - type: rewrite
         source: /*
         destination: /
