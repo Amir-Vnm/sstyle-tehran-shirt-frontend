@@ -192,7 +192,7 @@ const pageCount = Math.ceil(allProducts.length / itemsPerPage);
   {loading && <div > <Loading /> </div>}
     {currentItems.map((p)=>(
         <div key={p.id} className="   relative border-teal-600 text-center h-40 w-full md:w-1/2 border  cursor-pointer bg-white p-1 rounded shadow flex flex-row justify-around  border-b">
-            <img className=" w-1/2 h-1/2 md:w-1/2 md:h-1/2  " src={`https://style-tehran-shirt-nodejs.onrender.com${p.ImageFile}`} alt={p.Description || "لود نمیشود"} /> 
+            <img className=" w-1/2 h-1/2 md:w-1/2 md:h-1/2  " src={p.ImageFile} alt={p.Description || "لود نمیشود"} /> 
             <p className=" ">{p.Inventory} موجودی </p>
             <h3 className="text-md break-words w-2/3 absolute bottom-7 right-0  overflow-hidden ">{p.Description}</h3>
             <p className=" absolute right-0 top-12 text-sm text-gray-600">{p.Price} تومان</p>

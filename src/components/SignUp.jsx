@@ -18,6 +18,10 @@ export default function SignUpForm() {
       setMessage('❌ نام کامل و رمز عبور الزامی است');
       return;
     }
+    if (password.length <= 7  ) {
+      alert("تعداد کاراکتر ها باید حداقل 8 رقم باشد") 
+      return ;
+    }
 
     const { data, error } = await supabase
       .from('profiles')
@@ -46,14 +50,14 @@ export default function SignUpForm() {
             <img className=' absolute w-full h-full top-0 left-0 z-10 rounded blur-[4px] opacity-90 ' src={bgsign} alt="" />
 
 
-      <form onSubmit={handleSubmit} className=" relative w-[80%] mx-auto z-50 space-y-4 bg-white p-4 rounded ">
+      <form onSubmit={handleSubmit} className=" relative w-[80%] mx-auto z-50 space-y-4 bg-white p-4 rounded-2xl ">
         <input
           type="text"
           placeholder="نام کامل"
           name='fullName'
           value={fullName}
           onChange={(e) => setFullName(e.target.value)}
-          className="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-teal-300"
+          className="w-full px-4 py-2 border border-gray-300 rounded-2xl font-mono text-center focus:outline-none focus:ring-2 focus:ring-teal-300"
         />
 
         <input
@@ -62,21 +66,21 @@ export default function SignUpForm() {
           name='password'
           value={password}
           onChange={(e) => setPassword(e.target.value)}
-          className="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-teal-300"
+          className="w-full px-4 py-2 border border-gray-300 rounded-2xl font-mono text-center focus:outline-none focus:ring-2 focus:ring-teal-300"
         />
 
         <select
           value={role}
           onChange={(e) => setRole(e.target.value)}
-          className="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-teal-300"
+          className="w-full px-4 py-2 border border-gray-300 rounded-2xl font-mono text-center focus:outline-none focus:ring-2 focus:ring-teal-300"
         >
           <option className=' hover:bg-teal-200' value="user">user</option>
-         {/* <option value="admin">admin</option> */}
+         <option value="admin">admin</option> 
         </select>
      
         <button
           type="submit"
-          className="w-full bg-teal-800 text-white py-2 rounded hover:bg-teal-500 cursor-pointer transition"
+          className="w-full bg-teal-600 text-white py-2 rounded-2xl font-bold hover:bg-teal-800 cursor-pointer transition"
         >
           ثبت‌نام
         </button>

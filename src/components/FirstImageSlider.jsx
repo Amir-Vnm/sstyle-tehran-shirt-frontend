@@ -72,11 +72,12 @@ useEffect(()=>{
   }}
       >
        {categories.map((e) => (
+        
         <SwiperSlide key={e.id} >
 
     <div  className=" flex items-center  bg-teal-700 w-full md:h-[50vh]  relative border-x-3 border-teal-800">
      <Link to={`Products/ByCategory/${e.id}`} >
-      <img src={`https://style-tehran-shirt-nodejs.onrender.com${e.ImageFile}`} 
+      <img src={e.ImageFile} 
        alt={e.Name}  className=" w-full p-0  md:h-[50vh] object-cover rounded " />
       <p className=" absolute bottom-[20px] md:bottom-16 text-teal-600 text-shadow-sm/80 text-shadow-black left-2 underline underline-offset-7 text-2xl" >{e.Name}</p>
      </Link>

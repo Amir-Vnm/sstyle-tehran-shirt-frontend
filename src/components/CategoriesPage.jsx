@@ -263,13 +263,15 @@ const handleDelete = async (id) => {
                                 </form>
                                      </div>   
 
+
+
       <div className="  p-4 flex flex-row  md:grid grid-cols-6 md:items-center  mx-auto mt-32   h-[100%] w-full  md:w-[90%] gap-x-1 md:max-h-screen  md:border  border-black/40 rounded-2xl overflow-x-auto md:overflow-x-hidden overflow-y-scroll   ">
         {allCategories.length > 0 ? (
           allCategories.map((e, i) => {
             return(
             
             <div key={i} className="border-1 bg-gray-300 border-teal-600 rounded-2xl  mb-4  min-w-[160px] h-[240px]   md:w-60 md:h-56 flex flex-col text-center">
-              <img src={`https://style-tehran-shirt-nodejs.onrender.com${e.ImageFile}`} alt="تصویر دسته‌بندی" className=" w-full  rounded-t-2xl  object-center overflow-hidden" />
+              <img src={e.ImageFile} alt="تصویر دسته‌بندی" className=" w-full  rounded-t-2xl  object-center overflow-hidden" />
               <p className="text-2xl text-gray-700 ">{e.Name}</p>
               <p  >{e.id} : شماره</p>
 

@@ -71,7 +71,7 @@ useEffect(()=> {
                  
                 <div key={e.id} className=" relative  md:w-56 mx-auto mb-10 h-[40vh] md:h-80 bg-white border-1 border-gray-300 hover:shadow-md transition cursor-pointer hover:scale-101 rounded  shadow-md shadow-black inset-shadow-2xs  inset-shadow-teal-500 hover:border-teal-400 hover:shadow-teal-600 overflow-hidden break-words  " >
                     <Link to={`/Products/${e.id}`}>
-               <img className="w-full h-[20vh] md:h-50" src={`https://style-tehran-shirt-nodejs.onrender.com${e.ImageFile}`}
+               <img className="w-full h-[20vh] md:h-50" src={e.ImageFile}
                loading="lazy"  alt={e.Description || "لود نمیشود"} /> 
                    </Link>
                    <p className="text-center p-1 font-mono text-md" >{e.Description}</p>

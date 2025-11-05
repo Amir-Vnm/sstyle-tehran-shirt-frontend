@@ -49,7 +49,7 @@ export default function LoginForm() {
          <img className=' absolute w-full h-full z-10 top-0 left-0 rounded blur-[2px] opacity-90  ' src={bgform} alt="" />
 
 
-      <form onSubmit={handleLogin} className=" w-[80%] mx-auto relative space-y-4 z-50 rounded bg-white  p-4">
+      <form onSubmit={handleLogin} className=" w-[80%] mx-auto relative space-y-4 z-50 rounded-2xl bg-white  p-4">
 
         <input
           type="text"
@@ -57,7 +57,7 @@ export default function LoginForm() {
           placeholder="نام کامل"
           value={fullName}
           onChange={(e) => setFullName(e.target.value)}
-          className="  w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-sky-500"
+          className="  w-full px-4 py-2 border border-gray-300 rounded-2xl text-center font-mono focus:outline-none focus:ring-2 focus:ring-sky-500"
         />
 
         <input
@@ -65,13 +65,13 @@ export default function LoginForm() {
           placeholder="رمز عبور"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
-          className="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-sky-500"
+          className="w-full px-4 py-2 border border-gray-300 rounded-2xl text-center font-mono focus:outline-none focus:ring-2 focus:ring-sky-500"
         />
 
         <button
           
           type="submit"
-          className="w-full bg-sky-500 text-white py-2 rounded hover:bg-sky-700 transition cursor-pointer"
+          className="w-full bg-sky-500 text-white py-2 rounded-2xl text-center font-bold hover:bg-sky-700 transition cursor-pointer"
           
           
         >

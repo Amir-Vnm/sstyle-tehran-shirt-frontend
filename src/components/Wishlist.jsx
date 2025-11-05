@@ -40,7 +40,7 @@ const { wishlist , toggleWishlist  } = useShopStore() ;
                 <div className=' w-full h-full relative flex flex-row  items-center justify-around   mr-4 mt-[10px] md:mt-10 border-y bg-gray-100 border-black/30 overflow-hidden hover:scale-101 transition shadow-sm shadow-black/30 hover:shadow-md ' >
                   
                   
-                      <img className=" h-[60px] md:h-22   " src={`https://style-tehran-shirt-backend.onrender.com/${e.imageUrl}`} alt={e.description || "لود نمیشود"} />
+                      <img className=" h-[60px] md:h-22   " src={`https://style-tehran-shirt-nodejs.onrender.com${e.imageUrl}`} alt={e.description || "لود نمیشود"} />
                       <p className="text-right p-1 text-md  font-mono w-2/4 break-words  " >{e.description}</p>
                       <p className="text-center pt-1 font-bold underline underline-offset-5"> {` تومان ${e.price}  `} </p>
                      <button onClick={()=> toggleWishlist(e)  } className='border rounded-4xl bg-red-200 border-white hover:scale-110 cursor-pointer' >❌</button>

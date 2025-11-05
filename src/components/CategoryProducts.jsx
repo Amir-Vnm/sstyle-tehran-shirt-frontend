@@ -59,7 +59,7 @@ const sortCheapFirst = () => {
             <div key={p.id} className=" relative border border-black/30   bg-white cursor-pointer shadow-sm hover:shadow-md hover:border-teal-500 hover:shadow-teal-500 hover:scale-101  shadow-gray-500 ">
                <Link to={`/Products/${p.id}`}>
               <img
-                src={`https://style-tehran-shirt-nodejs.onrender.com${p.ImageFile}`}
+                src={p.ImageFile}
                 alt={p.name}
                 className="w-full h-50 object-cover mb-2 "
               />

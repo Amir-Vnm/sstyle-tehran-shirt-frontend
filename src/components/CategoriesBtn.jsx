@@ -87,7 +87,7 @@ const handleDelete = async (id) => {
               >
              
                 <img
-                  src={`https://style-tehran-shirt-nodejs.onrender.com${p.ImageFile}`}
+                  src={p.ImageFile}
                   alt={p.Name}
                   className="  object-center rounded-md w-1/2 h-1/2"
                 />

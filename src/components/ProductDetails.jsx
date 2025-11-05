@@ -114,7 +114,7 @@ function ProductDetails() {
       <div className="relative border  border-black/30 bg-white shadow-md    max-w-3xl mx-auto">
 
         <img
-          src={`https://style-tehran-shirt-nodejs.onrender.com${product.ImageFile}`}
+          src={product.ImageFile}
           alt={product.Name}
           className="w-full h-80 object-cover mb-4 "
         />
