@@ -1,5 +1,8 @@
 routes:
   - type: rewrite
+    source: /admin
+    destination: /
+  - type: rewrite
     source: /admin/*
     destination: /
   - type: rewrite
