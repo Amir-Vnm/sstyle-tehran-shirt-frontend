@@ -1,10 +1,10 @@
 services:
   - type: web
-    name: sstyle-tehran-shirt-frontend
+    name: my-react-app
     env: static
     buildCommand: npm run build
-    staticPublishPath: dist
+    staticPublishPath: dist   
     routes:
       - type: rewrite
         source: /*
-        destination: /
+        destination: /index.html
