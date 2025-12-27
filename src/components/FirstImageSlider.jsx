@@ -71,7 +71,7 @@ useEffect(()=>{
    
   }}
       >
-       {categories.map((e) => (
+       {Array.isArray(categories) && categories?.length > 0 && categories.map((e) => (
         
         <SwiperSlide key={e.id} >
 
@@ -83,9 +83,10 @@ useEffect(()=>{
      </Link>
   </div>
       </SwiperSlide>
-))}
+))
+}
 
-      </Swiper>
+      </Swiper> 
 
     </div>
 
