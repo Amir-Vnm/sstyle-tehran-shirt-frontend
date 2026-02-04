@@ -47,7 +47,7 @@ export default function SignUpForm() {
 
 
     <div className="max-w-md w-[96%] mx-auto mt-4  relative p-6 bg-white rounded-lg shadow-sm shadow-black tracking-in-contract-bck-bottom">
-            <img className=' absolute w-full h-full top-0 left-0 z-10 rounded blur-[4px] opacity-90 ' src={bgsign} alt="" />
+            <img className=' absolute w-full h-full top-0 left-0 z-10 rounded blur-[50px] opacity-90 ' src={bgsign} alt="" />
 
 
       <form onSubmit={handleSubmit} className=" relative w-[80%] mx-auto z-50 space-y-4 bg-white p-4 rounded-2xl ">

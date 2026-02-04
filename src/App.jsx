@@ -48,8 +48,8 @@ function App() {
                        <Route index element={ <DashboardPage /> } />
                        <Route path='dashboardPage' element={<DashboardPage />} />
                        <Route path='categorispage' element={<CategoriesPage />} />
-                       <Route path='productpages' element={<ProductsPage />} />
-                       <Route path='userlistpage' element={<UserListPage />} />
+                       <Route path='productPages' element={<ProductsPage />} />
+                       <Route path='userlistPage' element={<UserListPage />} />
                  </Route>     
        
 
@@ -61,7 +61,7 @@ function App() {
           
         
       </Routes>
-      
+       
  </Suspense>    
 </BrowserRouter>
 

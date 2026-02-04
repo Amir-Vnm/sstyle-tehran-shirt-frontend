@@ -46,7 +46,7 @@ export default function LoginForm() {
    
     
     <div className=" w-[96%] relative max-w-md mx-auto mt-4 pt-[20px] pb-[50px] md:pb-10 md:pt-10 md:p-10 bg-white rounded-lg shadow-sm shadow-black tracking-in-contract-bck-bottom">
-         <img className=' absolute w-full h-full z-10 top-0 left-0 rounded blur-[2px] opacity-90  ' src={bgform} alt="" />
+         <img className=' absolute w-full h-full z-10 top-0 left-0 rounded blur-[60px] opacity-90  ' src={bgform} alt="" />
 
 
       <form onSubmit={handleLogin} className=" w-[80%] mx-auto relative space-y-4 z-50 rounded-2xl bg-white  p-4">
@@ -71,13 +71,11 @@ export default function LoginForm() {
         <button
           
           type="submit"
-          className="w-full bg-sky-500 text-white py-2 rounded-2xl text-center font-bold hover:bg-sky-700 transition cursor-pointer"
-          
-          
+          className="w-full bg-sky-500 text-white py-2 rounded-2xl text-center font-bold hover:bg-sky-700 transition cursor-pointer"  
         >
-          
-          ورود
-        </button>
+          ورود 
+          </button>
+
       </form>
 
       {message && (

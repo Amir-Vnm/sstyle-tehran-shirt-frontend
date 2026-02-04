@@ -64,7 +64,7 @@ useEffect(()=> {
 
 >
   
-         {Array.isArray(allProduct) && allProduct ? allProduct.map((e)=> {
+         {Array.isArray(allProduct) && allProduct ? allProduct?.map((e)=> {
           
             return(
                 <SwiperSlide >

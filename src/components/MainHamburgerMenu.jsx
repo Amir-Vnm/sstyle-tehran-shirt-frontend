@@ -84,13 +84,13 @@ useEffect(()=>{
 
                               </div>}
 
-         <div className=' mt-[20px] md:mt-14 flex flex-row px-2 gap-x-1  ' >
-            <button onClick={()=> setOpenForm("SignUp")} className={` w-full mx-auto bg-teal-50 text-center 
-               text-lg hover:bg-black/20 font-semibold border-2   py-4  cursor-pointer rounded-4xl
-                ${openForm === "SignUp" ? "border-teal-500   bg-teal-100" : "border-teal-200"} `} >عضویت </button>
-            <button onClick={()=> setOpenForm("Login")} className={`  w-full mx-auto bg-sky-50 text-center
-               text-lg hover:bg-black/20 font-semibold border-2 py-4  cursor-pointer rounded-4xl
-                ${openForm === "Login" ? "border-sky-500   bg-sky-200 "  : "border-sky-200"}`} >ورود</button>
+         <div className=' mt-[16px] md:mt-14 flex flex-row px-2 gap-x-20 justify-baseline items-center w-3/4 mx-auto   ' >
+            <button onClick={()=> setOpenForm("SignUp")} className={` w-full mx-auto  text-center  shadow-md shadow-teal-500 bg-white
+              text-lg hover:bg-black/4 font-semibold border   py-4  cursor-pointer rounded-2xl hover:shadow-xs
+                ${openForm === "SignUp" ? "border-teal-100   bg-teal-50 shadow-sm text-teal-600" : "border-teal-200 text-slate-800"} `} >عضویت </button>
+            <button onClick={()=> setOpenForm("Login")} className={`  w-full mx-auto  text-center hover:shadow-xs hover:text-sky-500
+               text-lg hover:bg-black/4 font-semibold border py-4  cursor-pointer rounded-2xl  shadow-md shadow-sky-400 bg-white
+                ${openForm === "Login" ? "border-sky-400   bg-sky-200 shadow-sm text-sky-400 "  : "border-sky-300 text-slate-800"}`} >ورود</button>
          </div>
          <div> {forms[openForm]} </div>
 
