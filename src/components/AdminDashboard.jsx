@@ -33,7 +33,6 @@ export default function AdminDashboard( {hamburger,  } ) {
     
           <div className="flex flex-row gap-x-2 pb-0.5 font-serif shadow-sm shadow-black w-full rounded p-1  justify-end items-center" ><NavLink to="dashboardPage" className={({isActive})=> isActive ? "text-teal-600  border-b w-full text-center inset-shadow-2xs inset-shadow-teal-400 rounded-2xl px-1 py-0.5 transition  " : "text-black w-full "}>داشبورد  </NavLink> 
           <img className="w-6 h-6 " src={dashboardhome} alt="" /> </div> 
-                       <Route path='categorispage' element={<CategoriesPage />} />
           <div className="flex flex-row gap-x-2 pb-0.5 font-serif shadow-sm shadow-black w-full rounded p-1  justify-end items-center" > <NavLink to="categorispage" className={({isActive})=> isActive ? "text-teal-600 border-b w-full text-center inset-shadow-2xs inset-shadow-teal-400   rounded-2xl px-1 py-0.5 transition" : "text-black w-full "}>مدیریت دسته بندی ها</NavLink>
           <img className="w-6 h-6 " src={categorydashboard} alt="" /> </div>
           <div className="flex flex-row gap-x-2 pb-0.5 font-serif shadow-sm shadow-black w-full rounded p-1  justify-end items-center" > <NavLink to="productPages" className={({isActive})=> isActive ? "text-teal-600  border-b w-full text-center inset-shadow-2xs inset-shadow-teal-400  rounded-2xl px-1 py-0.5 transition" : "text-black w-full "}>مدیریت محصولات</NavLink>
